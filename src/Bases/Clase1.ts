@@ -24,11 +24,11 @@ export interface PokemonInterface{
     age?: number
 }
 
-const Pikachu: PokemonInterface = {
-    id: 1,
-    name: "Pikachu",
-    age: 12
-}
+// const Pikachu: PokemonInterface = {
+//     id: 1,
+//     name: "Pikachu",
+//     age: 12
+// }
 
 export class PokemonTrainer{
 
