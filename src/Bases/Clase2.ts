@@ -55,6 +55,10 @@ export async function ObtenerDatosAsyncAwait(){
 }
 
 export async function ConsultarApi(url:string){
-    const response = await fetch(url);
-    return response.json();
+    try {
+        const response = await fetch(url, {method: 'POST'});
+        return response.json();
+    } catch (error) {
+        console.log(error)
+    }
 }
