@@ -1,6 +1,6 @@
 import './style.css'
-import { setupCounter } from './counter.ts'
 import { PokemonInterface, PokemonTrainer } from './Bases/Clase1.ts'
+import { MostrarData, ObtenerDatosAsyncAwait, ObtenerDatosCallback, ObtenerDatosMediantePromesas, ObtenerPokemones, ValidarData } from './Bases/Clase2.ts';
 
 const div = document.getElementById('app')
 
@@ -34,12 +34,35 @@ div!.innerHTML=`
 <span><h2>Mis pokemones son:</h2>
 ${pokemons.map((pokemon) => {
   return `<p>${pokemon.name}</p>`
-})}
+}).join("")}
 </span>`
 
+// console.log("Antes del callback");
+// ObtenerDatosCallback(()=>{
+//   MostrarData(console.log)}); //Callback hell
+// console.log("Despues del callback");
 
 
+// console.log("Antes del callback");
+// ObtenerDatosMediantePromesas()
+// .then((data)=>{
+//   console.log(data);
+//   return ValidarData(data);
+// })
+// .then(()=>{
+//   console.log("Informacion validada")
+// })
+// .catch((error)=>{
+//   console.log(error);
+// })
+// ;
+// console.log("Despues del callback");
 
 
+console.log("Antes del Async Await");
+ObtenerDatosAsyncAwait()
+console.log("Despues del Async Await");
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+console.log(await ObtenerPokemones('https://pokeapi.co/api/v2/pokemon'));
+
+

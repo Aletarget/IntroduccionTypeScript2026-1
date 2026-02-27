@@ -7,11 +7,11 @@
 
 //Funciones
 
+
+
 export function mostrarNombres(nombre: string): string{
-    
     return "Hola "+nombre; 
 }
-
 export const mostrarNombreFuncionFlecha = (nombre: string):string => {
     return "Hola"+nombre
 }
