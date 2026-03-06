@@ -15,21 +15,20 @@ const productos: Producto[] = [
 ];
 
 
-// Parte 1: Usar forEach para mostar el producto y su precio correspondiente pero duplicado
+// Parte 1: Usar forEach para mostar el producto y su precio correspondiente pero duplicado en consola
 
 
-// Parte 2: Usar map (aplicar 10% de descuento)
+// Parte 2: Usar map (aplicar 10% de descuento) mostrar los objetos con el descuento aplicado por consola
+
 
 
 // Parte 3: Función que recibe un callback 
-// El objetivo de este ejercicio es pasarle como argumento un callback que meustre solo los productos que cuesten más de 100.
+// El objetivo de este ejercicio es pasarle como argumento un callback que muestre solo los productos que cuesten más de 100 por consola.
 function procesarProductos(productos: Producto[], callback: (p: Producto) => void) {
   productos.forEach((producto) => {
     callback(producto);
   });
 }
-
-// procesarProductos(productos, ??)
 
 
 // ======================================================
