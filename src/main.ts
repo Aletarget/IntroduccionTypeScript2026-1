@@ -1,10 +1,11 @@
 import './style.css'
 import { PokemonInterface, PokemonTrainer } from './Bases/Clase1.ts'
 import { MostrarData, ObtenerDatosAsyncAwait, ObtenerDatosCallback, ObtenerDatosMediantePromesas, ObtenerPokemones, ValidarData } from './Bases/Clase2.ts';
+import { PokemonTrainer2 } from './Bases/Clase3.ts';
 
 const div = document.getElementById('app')
 
-const Alejandro: PokemonTrainer = new PokemonTrainer(1,"Alejandro");
+const Alejandro: PokemonTrainer2 = new PokemonTrainer2(1,"Alejandro");
 
 Alejandro.setPokemon({
   id: 2,
