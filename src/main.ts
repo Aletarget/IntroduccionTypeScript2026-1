@@ -1,11 +1,10 @@
 import './style.css'
 import { PokemonInterface, PokemonTrainer } from './Bases/Clase1.ts'
-import { Repository, ObtenerDatos, ObtenerDatosMediantePromesas, ValidarData, ObtenerDatosAsyncAwait, ConsultarApi } from './Bases/Clase2.ts';
 
 const div = document.getElementById('app')
 
 const Alejandro: PokemonTrainer = new PokemonTrainer(1,"Alejandro");
-
+console.log(Alejandro.id)
 Alejandro.setPokemon({
   id: 2,
   name: "Charizard",
@@ -36,36 +35,3 @@ ${pokemons.map((pokemon) => {
   return `<p>${pokemon.name}</p>`
 }).join('')}
 </span>`
-
-
-// const usuario = "User23"
-// console.log("Antes del callback");
-// ObtenerDatos("Paso 1", 2000,(data:string)=>{
-//   console.log(data)
-//   Repository(usuario,(data:String)=>{
-//     console.log(data)
-//   })
-// });
-// console.log("Despues del callback");
-
-// console.log("Antes de la promesa");
-// ObtenerDatosMediantePromesas("USER123")
-// .then((mensajeDelResolve)=>{
-//   console.log(mensajeDelResolve)
-//   return ValidarData()
-// })
-// .then((data)=>{
-//   console.log(data)
-// })
-// .catch((error)=>{
-//   console.log(error)
-// })
-// console.log("Despues de la promesa");
-
-console.log("Antes de la promesa");
-ObtenerDatosAsyncAwait();
-console.log("Despues de la promesa");
-
-
-const results = await ConsultarApi('https://pokeapi.co/api/v2/pokemon');
-console.log(results)

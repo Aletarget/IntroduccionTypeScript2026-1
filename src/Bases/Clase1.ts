@@ -33,14 +33,19 @@ export interface PokemonInterface{
 // }
 
 export class PokemonTrainer{
-
-    readonly id: number;
-    readonly name: string;
     private pokemons: Array<PokemonInterface> = [];
-    constructor(id:number, name:string){
-        this.id = id;
-        this.name = name;
-    }
+
+    // readonly id: number;
+    // readonly name: string;
+    // constructor(id:number, name:string){
+    //     this.id = id;
+    //     this.name = name;
+    // }
+    // SOLO FUNCIONA EN TYPESCRIPT
+    constructor(
+        readonly id: number,
+        readonly name: string,
+    ){}
 
 
     setPokemon(pokemon: PokemonInterface){
